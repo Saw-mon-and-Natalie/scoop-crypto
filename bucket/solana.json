@@ -1,0 +1,40 @@
+{
+    "version": "1.8.2",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/solana-labs/solana/releases/download/v1.8.2/solana-release-x86_64-pc-windows-msvc.tar.bz2",
+            "hash": "sha512:4aae586f5182f7b215069c87628281a6240e70070794ffe89d5569da41507e781e90a1496ac6e15f5f21c8bf808ec1375cedd1f0b503ca2edb19c9390b9a5a45"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/solana-labs/solana/releases/download/v$version/solana-release-x86_64-pc-windows-msvc.tar.bz2"
+            }
+        }
+    },
+    "bin": [
+        "cargo-build-bpf.exe",
+        "cargo-test-bpf.exe",
+        "solana-install-init.exe",
+        "solana-install.exe",
+        "solana-keygen.exe",
+        "solana-stake-accounts.exe",
+        "solana-test-validator.exe",
+        "solana-tokens.exe",
+        "solana.exe",
+        "spl-token.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/solana-labs/solana"
+    },
+    "depends": [
+        "rustup",
+        "rust"
+    ],
+    "description": "Solana is an open source project implementing a new, high-performance, permissionless blockchain. The Solana Foundation is based in Geneva, Switzerland and maintains the open source project.",
+    "env_add_path": ".",
+    "extract_dir": "solana-release\\bin",
+    "homepage": "https://solana.com/",
+    "license": "Apache-2.0"
+}
